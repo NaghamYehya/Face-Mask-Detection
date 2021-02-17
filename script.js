@@ -94,15 +94,18 @@ async function renderPrediction() {
           ctx.font = "bold 15pt sans-serif";
           ctx.fillText(text,topLeftX+5,topLeftY+20) //draw text in canvas
 
-          video.classList.remove('hidden')
-          spinner.classList.add('hidden')
         }
+
 
     }
 
+    video.classList.remove('hidden')
+    spinner.classList.add('hidden')
   } 
   catch (err) {
-    console.error(err)
+    // console.error(err)
+    console.log('Please center your face');
+    
   }
 
   tf.engine().endScope() 
